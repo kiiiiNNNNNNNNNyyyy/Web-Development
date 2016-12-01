@@ -1,0 +1,32 @@
+
+		<div class="row">
+			<div class="col-sm-12">
+				<form id="static-form" method="post">
+					<div class="form-group">
+						<label for="text1">Main Text</label>
+						<textarea class="form-control" id="text1" required name="text1" placeholder="Enter your text here" value="{{text1}}"></textarea>
+					</div>
+					<div class="form-group">
+						<label for="text2">Text to be inserted: </label>
+						<input type="text" class="form-control" id="text2" required name="text2" placeholder="Text to be inserted" value="{{text2}}">
+					</div>
+					<div class="form-group">
+						<label for="repition">Inserted Text should repeat for <input required type="number" name="number1" id="number1" value="{{number1}}"> time!</label>
+					</div>
+					<div class="form-group">
+						<label for="after">Inserted Text should repeat after <input required type="number" name="number2" id="number2" value="{{number2}}"> letters!</label>
+					</div>
+					<div class="form-group hidden" id="error-container">
+						<div class="alert alert-danger text-goes-here">
+						</div>
+					</div>
+					<div class="form-group">
+						<button type="submit" name="submit" id="submit" class="btn btn-success">Submit</button>
+					</div>
+					<div class="form-group hidden" id="result-container">
+						<div class="alert alert-success text-goes-here"">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div

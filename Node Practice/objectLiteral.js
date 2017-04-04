@@ -6,3 +6,5 @@ var person = {
     }
 };
 person.greet();
+//another way of accessing the data
+console.log(person['firstname'])

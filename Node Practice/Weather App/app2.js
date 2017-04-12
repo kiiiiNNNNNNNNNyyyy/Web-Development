@@ -11,7 +11,7 @@ const argv = yargs.options({
 var encodedAddress = encodeURIComponent(argv.address);
 var geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
 var api = '5ade4f8faf34b4e5e479486f1418a0f1';
-axios.get(geocodeUrl).then((response) => {
+axios.get(geocodeUrl).then((response) => { 
     if(response.data.status === 'ZERO_RESULTS'){
         throw new Error("Unable to find the address.");
     }

@@ -3,22 +3,24 @@ const hbs = require('hbs');
 var app = express();
 
 //Middleware
+hbs.registerPartials(__dirname + '/views/partials');   
 app.set('view engine', 'hbs');  //telling the express which handlebars we are gonna use.
 app.use(express.static(__dirname + '/public'));
+hbs.registerHelper('getCurrentYear', () => {
+    return new Date().getFullYear();
+});
 
 app.get('/', (req, res) => {
     //res.send("Hello Express!!");
     res.render('home.hbs', {
         pageTitle: 'Home Page',
-        welcomeMsg: 'Welcome to our site',
-        currentYear: new Date().getFullYear() 
+        welcomeMsg: 'Welcome to our site'
     });
 });
 
 app.get('/about', (req, res) => {
     res.render('about.hbs', {
-        pageTitle: 'About Page',
-        currentYear: new Date().getFullYear()
+        pageTitle: 'About Page'
     });
 });
 

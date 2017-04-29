@@ -1,4 +1,6 @@
-const MongoClient = require('mongodb').MongoClient;
+//const MongoClient = require('mongodb').MongoClient;
+//implementing destructuring
+const {MongoClient, ObjectID} = require('mongodb');
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     if(err) return console.log("Unable to connect to the database.");   //to stop the function as soon as a error occurs.

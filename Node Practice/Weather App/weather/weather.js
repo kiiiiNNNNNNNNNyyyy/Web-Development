@@ -6,16 +6,16 @@ var getWeather = (lat, lng, callback) => {
     url: `https://api.darksky.net/forecast/${api}/${lat},${lng}`,
     json: true
 }, (error, response, body) => {
-    if(error){
-        callback('Unable to connect to the server');
-    }else if(response.statusCode === 400){
-        callback("Unable to fetch the weather for this location.");
-    }else if(response.statusCode === 200){
-        callback(undefined, {
-            temperature: body.currently.temperature,
-            apparentTemp: body.currently.apparentTemperature
-        });
-    }
+        if(error){
+            callback('Unable to connect to the server');
+        }else if(response.statusCode === 400){
+            callback("Unable to fetch the weather for this location.");
+        }else if(response.statusCode === 200){
+            callback(undefined, {
+                temperature: body.currently.temperature,
+                apparentTemp: body.currently.apparentTemperature
+            });
+        }
 });
 
 };

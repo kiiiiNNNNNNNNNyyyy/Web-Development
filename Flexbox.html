@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<script src="index.js"></script>
+	<link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="position: relative; font-size: 16px; ">
+	<div class="flexwrapper">
+		<div style="font-size: 2em; display: flex; background-color: red; height: 21%;">
+			<div style="background-color: white; width: 12%">buffer</div>
+			<div class="header">header</div>
+			<div>buffer</div>          
+		</div>
+		<div style="background-color: green; height: 57%">body</div>   
+		<div style="font-size: .5em; background-color: blue; height: 22%">footer</div>
+	</div>
+	<img style="width: 100%" src="http://testing.arkadium.com/gameexamples/interactives/ceo-comparison/build/resources/overlay1.png">
+	<style>
+		.header {
+			text-align: center;
+			width: 76%
+		}
+		.flexwrapper {
+			background-color: whitesmoke;
+			opacity: 0.7;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+		}
+		@media(max-width: 680px) {
+			.header {
+				height: 0;
+			}
+		}
+		
+	</style>
+</body>
+</html>
